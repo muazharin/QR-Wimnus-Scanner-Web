@@ -16,13 +16,13 @@
 			
 			//Eksekusi Query database
 			if(mysqli_query($con,$sql)){
-				echo 'Berhasil Menambahkan Peserta';
+				echo 'Data added successfully';
 			}else{
-				echo 'QR Code tidak dikenal! Silahkan hubungi admin~';
+				echo 'QR Code is unknown! Please contact the admin~';
 			}
 		
 		} else {
-			echo 'Peserta sudah terdaftar sebelumnya!';
+			echo 'Data has been registered before!';
 		}
 		
 		
