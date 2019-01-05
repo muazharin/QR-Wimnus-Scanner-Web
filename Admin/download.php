@@ -78,18 +78,18 @@ $html = '<!DOCTYPE html>
 </head>
 
 <body>
-    <table border="1" style="padding: 16px;">
+    <table border="1" style="padding: 8px;" width="200px">
       <tr>
-        <td colspan="2" align="center" style="font-size: 30px;"> KARTU PESERTA </td>
+        <td colspan="2" align="center" style="font-size: 10px;"> KARTU PESERTA </td>
       </tr>
       <tr>
-        <td align="center"><img src="codexv.png" alt="" width="100px"><br><br>CodeXV</td>  
-        <td align="center"><img src="wimnus.png" alt="" width="100px"><br>WIMNUS</td>  
+        <td align="center"><img src="codexv.png" alt="" width="50px"><br>CodeXV</td>  
+        <td align="center"><img src="wimnus.png" alt="" width="50px"><br>WIMNUS</td>  
       </tr>
       <tr>
         <td colspan="2" align="center">
-          <img src="http://localhost/peserta/Admin/qr.php?id='.$id.'" alt="" width="150px"><br><br>
-          <span style="font-size:20px;">'.$data_a[0].'</span>
+          <img src="http://localhost/peserta/Admin/qr.php?id='.$id.'" alt="" width="200px"><br><br>
+          <span style="font-size:10px;">'.$data_a[0].'</span>
         </td>
       </tr>
     </table>
