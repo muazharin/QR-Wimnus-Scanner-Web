@@ -105,7 +105,7 @@
 											<td><?= $data[lo];?></td>
 											<td>
 												<a href="qr.php?id=<?= $data[idPes];?>" type="button" class="btn btn-info" data-target="#customModal<?= $data[idPes];?>" data-toggle="modal" ><i class="fa fa-info"></i></a>
-												<a href="#" type="button" class="btn btn-info" data-target="#customModalB<?= $data[idPes];?>" data-toggle="modal" ><i class="fa fa-edit"></i></a>
+												<a href="#" type="button" class="btn btn-info"><i class="fa fa-edit"></i></a>
 												<a href="download.php?id=<?= $data[idPes];?>" type="button" class="btn btn-info"><i class="fa fa-download"></i></a>
 											</td>
 											
