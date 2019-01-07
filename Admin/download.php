@@ -54,7 +54,7 @@ $pdf->SetFont('times', '', 11);
 
 // add a page
 
-$pdf->AddPage('P', 'A4');
+$pdf->AddPage('P', 'A6');
 
 // writeHTML($html, $ln=true, $fill=false, $reseth=false, $cell=false, $align='')
 // writeHTMLCell($w, $h, $x, $y, $html='', $border=0, $ln=0, $fill=0, $reseth=true, $align='', $autopadding=true)
@@ -88,7 +88,7 @@ $html = '<!DOCTYPE html>
       </tr>
       <tr>
         <td colspan="2" align="center">
-          <img src="http://localhost/peserta/Admin/qr.php?id='.$id.'" alt="" width="200px"><br><br>
+          <img src="http://localhost/peserta/Admin/qr.php?id='.$id.'" alt="" width=""><br><br>
           <span style="font-size:10px;">'.$data_a[0].'</span>
         </td>
       </tr>
