@@ -126,18 +126,6 @@
                         <li id="box3-2" class=""><a href="form_lo.php">LO</a></li>
                     </ul>
                 </li>
-                <li class="submenu">
-                    <a href="#"><i class="fa fa-fw fa-file-text-o"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="forms-general.html">General Elements</a></li>
-                            <li><a href="forms-select2.html">Select2</a></li>
-                            <li><a href="forms-validation.html">Form Validation</a></li>
-                            <li><a href="forms-text-editor.html">Text Editors</a></li>
-                            <li><a href="forms-upload.html">Multiple File Upload</a></li>
-                            <li><a href="forms-datetime-picker.html">Date and Time Picker</a></li>
-                            <li><a href="forms-color-picker.html">Color Picker</a></li>
-                        </ul>
-                </li>
 					
             </ul>
 
