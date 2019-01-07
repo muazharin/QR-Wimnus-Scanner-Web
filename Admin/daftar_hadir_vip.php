@@ -120,7 +120,7 @@
     
 	<footer class="footer">
 		<span class="text-right">
-		Copyright <a target="_blank" href="#">&copy 2018</a>
+		Copyright <a target="_blank" href="#">&copy 2019</a>
 		</span>
 		<span class="float-right">
 		Powered by <a target="_blank" href="https://www.instagram.com/codexv.group/"><b>CodeXV</b></a>
