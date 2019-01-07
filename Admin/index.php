@@ -144,59 +144,6 @@
 												</div>
 											</div>
 										</div>
-										<div class="modal fade custom-modal" id="customModalB<?= $data[idPes];?>" tabindex="-1" role="dialog" aria-labelledby="customModal" aria-hidden="true">
-											<div class="modal-dialog" role="document">
-												<div class="modal-content">
-												<div class="modal-header">
-													<h5 class="modal-title" id="exampleModalLabel2">Detail Peserta</h5>
-													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-													<span aria-hidden="true">&times;</span>
-													</button>
-												</div>
-												<div class="modal-body">
-													<p><form action="" method="post">
-													<?php
-														$id = $data[idPes];
-														$queryModal = "SELECT * FROM data_peserta WHERE idPes = $id";
-														$sqlModal = mysqli_query($con, $queryModal);
-														while($row=mysqli_fetch_array($sqlModal)){
-														?>
-															<label for="name">Nama : </label>
-															<input type="text" name="nama" value="<?= $row[nama];?>"><br>
-															<label for="instansi">Instansi : </label>
-															<input type="text" name="instansi" value="<?= $row[instansi];?>"><br>
-															<label for="noHp">No HP : (+62)</label>
-															<input type="text" name="noHp" value="<?= $row[noHp];?>"><br>
-															<label for="lo">LO :</label>
-															<select name="lo" id="">
-																<option value="Hendra" <?php if($data[lo]=='Hendra'){echo 'selected'; }?> >Hendra</option>
-																<option value="Roza" <?php if($data[lo]=='Roza'){echo 'selected'; }?> >Roza</option>
-																<option value="Afni" <?php if($data[lo]=='Afni'){echo 'selected'; }?> >Afni</option>
-																<option value="Ilham" <?php if($data[lo]=='Ilham'){echo 'selected'; }?> >Ilham</option>
-																<option value="Aslan" <?php if($data[lo]=='Aslan'){echo 'selected'; }?> >Aslan</option>
-																<option value="Ratri" <?php if($data[lo]=='Ratri'){echo 'selected'; }?> >Ratri</option>
-																<option value="Fajrian" <?php if($data[lo]=='Fajrian'){echo 'selected'; }?> >Fajrian</option>
-																<option value="Agung" <?php if($data[lo]=='Agung'){echo 'selected'; }?> >Agung</option>
-																<option value="Desi" <?php if($data[lo]=='Desi'){echo 'selected'; }?> >Desi</option>
-																<option value="Yudi" <?php if($data[lo]=='Yudi'){echo 'selected'; }?> >Yudi</option>
-																<option value="Arianto" <?php if($data[lo]=='Arianto'){echo 'selected'; }?> >Arianto</option>
-															</select><br>
-															<label for="kelas">Kelas :</label>
-															<select name="kelas" id="">
-																<option value="REGULER" <?php if($data[kelas]=='REGULER'){echo 'selected'; }?> >REGULER</option>
-																<option value="VIP" <?php if($data[kelas]=='VIP'){echo 'selected'; }?> >VIP</option>
-															</select><br><br>
-															<input type="button" value="Update" name="update" class="btn btn-primary">
-														<?php
-														}
-													?></form></p>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-												</div>
-												</div>
-											</div>
-										</div>
 										<?php
 									}?>
 									</tbody>
