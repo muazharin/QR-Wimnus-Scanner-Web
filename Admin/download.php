@@ -62,6 +62,8 @@ include '../koneksi.php';
 $id = $_GET['id'];
 $nama_a = mysqli_query($con,"SELECT nama FROM data_peserta WHERE idPes = '$id'");
 $data_a = mysqli_fetch_array($nama_a);
+$semua = mysqli_query($con,"SELECT * FROM data_peserta WHERE idPes ='$id'");
+$data_all = mysqli_fetch_array($semua);
       
 
 // create some HTML content
@@ -111,7 +113,7 @@ ob_end_clean();
 
 
 //Close and output PDF document
-$pdf->Output('CodeXV_'.$data_a[0].'.pdf', 'I');
+$pdf->Output($data_all[0].'_'.$data_all[1].'_'.$data_all[2].'.pdf', 'I');
 
 //============================================================+
 // END OF FILE

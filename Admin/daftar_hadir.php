@@ -59,56 +59,88 @@
 											<td>(+62) <?= $data[noHp];?></td>
 											<td><?= $data[kelas];?></td>
 											<td><?= $data[kehadiran];?></td>
-											<td>
+											<td class="text-center">
 												<form action="" method="post">
+														<a href="qr.php?id=<?= $data[idPes];?>" type="button" class="btn btn-info" data-target="#customModal<?= $data[idPes];?>" data-toggle="modal" ><i class="fa fa-info"></i></a>
 													<input type="hidden" name="idPesBaru" value="<?= $data[idPes];?>">
-													<input type="submit" name="hapus" value="Hapus" class="btn btn-danger">
+													<button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
 													
 												</form>
 											</td>
 											
 										</tr>
-										<!-- Modal -->
-										<div class="modal fade custom-modal" id="customModal<?= $data[idPes];?>" tabindex="-1" role="dialog" aria-labelledby="customModal" aria-hidden="true">
-											<div class="modal-dialog" role="document">
-												<div class="modal-content">
-												<div class="modal-header">
-													<h5 class="modal-title" id="exampleModalLabel2">Detail Peserta</h5>
-													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-													<span aria-hidden="true">&times;</span>
-													</button>
-												</div>
-												<div class="modal-body">
-													<p><?php
-														$id = $data[idPes];
-														$queryModal = "SELECT * FROM data_peserta WHERE idPes = $id";
-														$sqlModal = mysqli_query($con, $queryModal);
-														while($row=mysqli_fetch_array($sqlModal)){
-														?>
-															Nama : <?= $row[nama];?><br><br>
-															Instansi : 	<?= $row[instansi];?><br><br>
-															No Hp : (+62)<?= $row[noHp];?><br><br>
-															Kelas : <?= $row[kelas];?><br><br>
-															QR Code : <br><br>
-															<img src="http://localhost/peserta/Admin/qr.php?id=<?= $id;?>" alt=""><br><br>
-															zHx<?= $id;?>codeXV
-														<?php
-														}
-													?></p>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-												</div>
-												</div>
-											</div>
-										</div>
-										<?php
-									}?>
+										<?php } ?>
 									</tbody>
 								</table>
 								
 							</div>														
-						</div><!-- end card-->				
+						</div><!-- end card-->	
+
+<?php
+	$i = 1;
+	$qwe="SELECT * FROM data_peserta WHERE kehadiran = 'hadir' AND kelas = 'REGULER'";
+	$sqlqwe=mysqli_query($con,$qwe);
+	while($data=mysqli_fetch_array($sqlqwe)){
+?>
+	<!-- Modal -->
+	<div class="modal fade custom-modal" id="customModal<?= $data[idPes];?>" tabindex="-1" role="dialog" aria-labelledby="customModal" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel2">Detail Peserta</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<?php
+				$id = $data[idPes];
+				$queryModal = "SELECT * FROM data_peserta WHERE idPes = $id";
+				$sqlModal = mysqli_query($con, $queryModal);
+				$row=mysqli_fetch_array($sqlModal);
+				?>
+				<table>
+					<tr>
+						<td>Nama</td> 
+						<td>:</td>
+						<td><?= $row[nama];?></td>
+					</tr>
+					<tr>
+						<td>Instansi</td>
+						<td>:</td> 	
+						<td><?= $row[instansi];?></td>
+					</tr>
+					<tr>
+						<td>No Hp</td>
+						<td>:</td> 
+						<td>(+62)<?= $row[noHp];?></td>
+					</tr>
+					<tr>
+						<td>LO</td>
+						<td>:</td>
+						<td><?= $row[lo];?></td>
+					</tr>
+					<tr>
+						<td>Kelas</td>
+						<td>:</td>
+						<td><?= $row[kelas];?></td>
+					</tr>
+					<tr>
+						<td>QR Code</td>
+						<td>:</td>
+						<td></td> 
+					</tr>
+				</table>
+				<center><img src="http://localhost/peserta/Admin/qr.php?id=<?= $id;?>" alt=""><br><br></center>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+		</div>
+	</div>
+<?php } ?>
 					</div>
 				</div>			
             </div>
@@ -120,7 +152,7 @@
     
 	<footer class="footer">
 		<span class="text-right">
-		Copyright <a target="_blank" href="#">&copy 2019</a>
+		Copyright <a target="_blank" href="#">&copy 2018</a>
 		</span>
 		<span class="float-right">
 		Powered by <a target="_blank" href="https://www.instagram.com/codexv.group/"><b>CodeXV</b></a>
@@ -166,8 +198,8 @@
 <script src="assets/js/sweetalert.min.js"></script>
 
 	<?php
-		if(isset($_POST[hapus])){
-		$idPesBaru = $_POST[idPesBaru];
+		if(isset($_POST['idPesBaru'])){
+		$idPesBaru = $_POST['idPesBaru'];
 		echo '
 		<script>
 			setTimeout(function(){

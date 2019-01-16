@@ -123,7 +123,7 @@
                     <a id="box3" class=""><i class="fa fa-fw fa-file-text-o"></i> <span> Form </span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
                         <li id="box3-1" class=""><a href="form_peserta.php">Peserta</a></li>
-                        <li id="box3-2" class=""><a href="form_lo.php">LO</a></li>
+                        <!-- li id="box3-2" class=""><a href="form_admin_lo.php">Admin & LO</a></li -->
                     </ul>
                 </li>
 					
