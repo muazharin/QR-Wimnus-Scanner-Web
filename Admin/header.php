@@ -58,7 +58,7 @@
         <div class="headerbar-left">
 			<a href="index.php" class="logo">
                 <img alt="Logo" src="wimnus.png" /> 
-                <span>Wimnus</span></a>
+                <span>WIMNUS</span></a>
         </div>
 
         <nav class="navbar-custom">
